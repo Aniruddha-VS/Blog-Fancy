@@ -119,10 +119,10 @@ With this itinerary, you'll experience the imperial grandeur, artistic treasures
 
 ## Planning Your European Adventure
 
-Vienna is just one of many incredible European cities to explore. If you're planning a multi-city trip, consider combining Vienna with other European destinations:
+If you're planning a longer European trip, consider adding these nearby destinations to your itinerary:
 
-- <InternalLink slug="48-hours-in-prague" /> - Just a 4-hour train ride from Vienna, Prague offers a completely different Central European experience
-- <InternalLink slug="48-hours-in-budapest" /> - The Hungarian capital is just 2.5 hours by train from Vienna
-- <InternalLink slug="48-hours-in-munich" /> - For a German perspective on Central European culture
+- [48 Hours in Prague](/posts/48-hours-in-prague) - Just a 4-hour train ride from Vienna, Prague offers a completely different Central European experience
+- [48 Hours in Budapest](/posts/48-hours-in-budapest) - The Hungarian capital is just 2.5 hours by train from Vienna
+- [48 Hours in Munich](/posts/48-hours-in-munich) - For a German perspective on Central European culture
 
 Each city offers its own unique charm and experiences, making Europe an endlessly fascinating continent to explore.

@@ -136,10 +136,10 @@ This Munich itinerary maximizes your 48 hours with efficient routes while keepin
 
 ## Planning Your European Adventure
 
-Munich is just one of many incredible European cities to explore. If you're planning a multi-city trip, consider combining Munich with other European destinations:
+If you're planning a longer European trip, consider adding these nearby destinations to your itinerary:
 
-- <InternalLink slug="48-hours-in-vienna" /> - Just a 4-hour train ride from Munich, Vienna offers a completely different Central European experience
-- <InternalLink slug="48-hours-in-prague" /> - The Czech capital is just 6 hours by train from Munich
-- <InternalLink slug="48-hours-in-budapest" /> - The Hungarian capital is just 7 hours by train from Munich
+- [48 Hours in Vienna](/posts/48-hours-in-vienna) - Just a 4-hour train ride from Munich, Vienna offers a completely different Central European experience
+- [48 Hours in Prague](/posts/48-hours-in-prague) - The Czech capital is just 6 hours by train from Munich
+- [48 Hours in Budapest](/posts/48-hours-in-budapest) - The Hungarian capital is just 7 hours by train from Munich
 
 Each city offers its own unique charm and experiences, making Europe an endlessly fascinating continent to explore.

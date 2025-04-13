@@ -168,10 +168,10 @@ The true key to experiencing Budapest authentically lies in balancing its iconic
 
 ## Planning Your European Adventure
 
-Budapest is just one of many incredible European cities to explore. If you're planning a multi-city trip, consider combining Budapest with other European destinations:
+If you're planning a longer European trip, consider adding these nearby destinations to your itinerary:
 
-- <InternalLink slug="48-hours-in-vienna" /> - Just a 2.5-hour train ride from Budapest, Vienna offers a completely different Central European experience
-- <InternalLink slug="48-hours-in-prague" /> - The Czech capital is just 7 hours by train from Budapest
-- <InternalLink slug="48-hours-in-munich" /> - For a German perspective on Central European culture
+- [48 Hours in Vienna](/posts/48-hours-in-vienna) - Just a 2.5-hour train ride from Budapest, Vienna offers a completely different Central European experience
+- [48 Hours in Prague](/posts/48-hours-in-prague) - The Czech capital is just 7 hours by train from Budapest
+- [48 Hours in Munich](/posts/48-hours-in-munich) - For a German perspective on Central European culture
 
 Each city offers its own unique charm and experiences, making Europe an endlessly fascinating continent to explore.
