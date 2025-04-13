@@ -1,7 +1,8 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import { Image } from 'astro:assets';
-const { frontmatter } = Astro.props;
+import InternalLink from "../components/InternalLink.astro";
+const { frontmatter, entry } = Astro.props;
 import { AstroSeo } from "@astrolib/seo";
 ---
 
@@ -11,9 +12,9 @@ Use AstroSeo in all the pages you want different Seo than the index page
 <AstroSeo
   title={frontmatter.title}
   description={frontmatter.description}
-  canonical={`https://yourwebsite.com/posts/${frontmatter.slug}`}
+  canonical={`https://avsblogs.netlify.app/posts/${frontmatter.slug}`}
   openGraph={{
-    url: `https://yourwebsite.com/posts/${frontmatter.slug}`,
+    url: `https://avsblogs.netlify.app/posts/${frontmatter.slug}`,
     title: frontmatter.title,
     description: frontmatter.description,
     images: [
@@ -25,11 +26,11 @@ Use AstroSeo in all the pages you want different Seo than the index page
         type: "image/jpeg",
       }
     ],
-    site_name: "Your Site Name",
+    site_name: "Aniruddha Surse",
   }}
   twitter={{
-    handle: "@yourhandle",
-    site: "@yoursite",
+    handle: "@aniruddhasurse",
+    site: "@aniruddhasurse",
     cardType: "summary_large_image",
   }}
 />

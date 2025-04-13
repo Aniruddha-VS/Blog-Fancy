@@ -1,5 +1,10 @@
+# Allow all web crawlers
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://yourwebsite.com/sitemap-index.xml 
+# Sitemap location
+Sitemap: https://avsblogs.netlify.app/sitemap.xml
+
+# Disallow admin or private areas if they exist
+# Disallow: /admin/
+# Disallow: /private/ 

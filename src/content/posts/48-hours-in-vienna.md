@@ -116,3 +116,13 @@ Cap off your Viennese adventure with a final taste of local cuisine:
 - **Water:** Tap water in Vienna is excellent – bring a refillable bottle.
 
 With this itinerary, you'll experience the imperial grandeur, artistic treasures, and coffee house charm that make Vienna one of Europe's most captivating capitals – all in just 48 hours. From the splendor of Habsburg palaces to the simple pleasure of a perfectly made Melange coffee, your weekend in Vienna will leave you planning your return before you've even left.
+
+## Planning Your European Adventure
+
+Vienna is just one of many incredible European cities to explore. If you're planning a multi-city trip, consider combining Vienna with other European destinations:
+
+- <InternalLink slug="48-hours-in-prague" /> - Just a 4-hour train ride from Vienna, Prague offers a completely different Central European experience
+- <InternalLink slug="48-hours-in-budapest" /> - The Hungarian capital is just 2.5 hours by train from Vienna
+- <InternalLink slug="48-hours-in-munich" /> - For a German perspective on Central European culture
+
+Each city offers its own unique charm and experiences, making Europe an endlessly fascinating continent to explore.

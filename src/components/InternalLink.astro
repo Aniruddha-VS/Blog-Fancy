@@ -1,0 +1,32 @@
+import { getCollection } from "astro:content";
+
+interface Props {
+  slug: string;
+  text?: string;
+  class?: string;
+}
+
+const { slug, text, class: className } = Astro.props;
+
+// Get all posts
+const allPosts = await getCollection("posts");
+
+// Find the post with the matching slug
+const post = allPosts.find((post) => post.slug === slug);
+
+// If no post is found, just render the text without a link
+if (!post) {
+  console.warn(`No post found with slug: ${slug}`);
+}
+
+{post ? (
+  <a
+    href={`/posts/${post.slug}`}
+    class={className || "text-blue-600 hover:text-blue-800 underline"}
+    title={post.data.title}
+  >
+    {text || post.data.title}
+  </a>
+) : (
+  <span class={className}>{text || slug}</span>
+)} 

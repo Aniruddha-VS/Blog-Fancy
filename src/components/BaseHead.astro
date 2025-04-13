@@ -67,29 +67,29 @@ const { title, description, image, article, canonicalURL } = Astro.props;
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
 <AstroSeo
-  title="Aniruddha's Blogs"
-  description="A detailed description of your page content."
-  canonical="https://yoursite.com/current-page"
+  title="Aniruddha Surse | Personal Blog & Portfolio"
+  description="Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator."
+  canonical={canonicalURL || "https://avsblogs.netlify.app/"}
   openGraph={{
-    url: "https://yoursite.com/current-page",
-    title: "Aniruddha's Blogs",
-    description: "A detailed description of your page content.",
+    url: canonicalURL || "https://avsblogs.netlify.app/",
+    title: "Aniruddha Surse | Personal Blog & Portfolio",
+    description: "Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator.",
     images: [
       {
-        url: "https://yoursite.com/og-image.jpg",
+        url: "https://avsblogs.netlify.app/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Open Graph Image Alt",
+        alt: "Aniruddha Surse - Personal Website",
         type: "image/jpeg",
       },
     ],
-    site_name: "Aniruddha's Blogs",
+    site_name: "Aniruddha Surse",
     type: "website",
     locale: "en_US",
   }}
   twitter={{
-    handle: "@yourhandle",
-    site: "@yoursite",
+    handle: "@aniruddhasurse",
+    site: "@aniruddhasurse",
     cardType: "summary_large_image",
   }}
 />
@@ -99,38 +99,51 @@ const { title, description, image, article, canonicalURL } = Astro.props;
 
 <!-- Basic Meta Tags -->
 <meta name="generator" content={Astro.generator} />
-<meta name="description" content="A detailed description of your page content." />
-<title>Aniruddha's Blogs</title>
+<meta name="description" content="Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator." />
+<meta name="author" content="Aniruddha Surse" />
+<meta name="keywords" content="Aniruddha Surse, software developer, tech blog, portfolio, web development, programming" />
+<title>Aniruddha Surse | Personal Blog & Portfolio</title>
+
+<!-- Favicons -->
+<link rel="icon" href="/favicons/favicon.png" type="image/png" />
+<link rel="apple-touch-icon" href="/favicons/favicon.png" />
+<link rel="manifest" href="/favicons/site.webmanifest" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://yoursite.com/current-page" />
-<meta property="og:title" content="Aniruddha's Blogs" />
-<meta property="og:description" content="A detailed description of your page content." />
-<meta property="og:image" content="https://yoursite.com/og-image.jpg" />
+<meta property="og:url" content={canonicalURL || "https://avsblogs.netlify.app/"} />
+<meta property="og:title" content="Aniruddha Surse | Personal Blog & Portfolio" />
+<meta property="og:description" content="Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator." />
+<meta property="og:image" content="https://avsblogs.netlify.app/og-image.jpg" />
+<meta property="og:site_name" content="Aniruddha Surse" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://yoursite.com/current-page" />
-<meta property="twitter:title" content="Aniruddha's Blogs" />
-<meta property="twitter:description" content="A detailed description of your page content." />
-<meta property="twitter:image" content="https://yoursite.com/og-image.jpg" />
+<meta property="twitter:url" content={canonicalURL || "https://avsblogs.netlify.app/"} />
+<meta property="twitter:title" content="Aniruddha Surse | Personal Blog & Portfolio" />
+<meta property="twitter:description" content="Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator." />
+<meta property="twitter:image" content="https://avsblogs.netlify.app/og-image.jpg" />
+<meta property="twitter:creator" content="@aniruddhasurse" />
 
 <!-- Canonical URL -->
-<link rel="canonical" href="https://www.yourwebsite.com/" />
+<link rel="canonical" href={canonicalURL || "https://avsblogs.netlify.app/"} />
 
 <!-- Additional SEO -->
-<meta name="robots" content="index, follow" />
-<meta name="googlebot" content="index, follow" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="googlebot" content="index, follow, max-image-preview:large" />
+<meta name="google" content="notranslate" />
+<meta name="revisit-after" content="7 days" />
+<meta name="rating" content="general" />
 
-<!-- Apple Touch Icon (already included in favicons, but keeping for backwards compatibility) -->
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<!-- Apple Touch Icon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/favicon.png" />
 
 <!-- Theme Color for Mobile Browsers -->
 <meta name="theme-color" content="#ffffff" />
 
 <!-- For IE -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
 <!-- HTML in your document's head -->
 <link rel="preconnect" href="https://rsms.me/" />
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
@@ -163,3 +176,39 @@ const { title, description, image, article, canonicalURL } = Astro.props;
   <link href="https://api.fontshare.com/v2/css?f[]=jet-brains-mono@1,2&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" />
 </noscript>
+
+<!-- Structured Data for Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Aniruddha Surse",
+  "url": "https://avsblogs.netlify.app/",
+  "sameAs": [
+    "https://www.linkedin.com/in/aniruddha-surse",
+    "https://www.instagram.com/aniruddha.surse/",
+    "https://github.com/aniruddhasurse"
+  ],
+  "jobTitle": "Software Developer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Self-employed"
+  },
+  "description": "Software developer, tech enthusiast, and content creator. Exploring web development, programming, and technology."
+}
+</script>
+
+<!-- Structured Data for WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Aniruddha Surse",
+  "url": "https://avsblogs.netlify.app/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://avsblogs.netlify.app/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>

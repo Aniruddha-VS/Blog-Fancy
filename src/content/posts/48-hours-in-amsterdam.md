@@ -98,3 +98,13 @@ For your final evening, options abound. Splurge on an upscale dinner at one of A
 - Most locals speak excellent English, but learning "dank je wel" (thank you) is always appreciated
 
 Amsterdam rewards the curious traveler. While this 48-hour itinerary hits the highlights, allow yourself to occasionally stray from the plan—some of Amsterdam's most magical moments happen when you simply follow an interesting canal or the aroma of fresh stroopwafels down an unexpected alley.
+
+## Planning Your European Adventure
+
+Amsterdam is just one of many incredible European cities to explore. If you're planning a multi-city trip, consider combining Amsterdam with other European destinations:
+
+- <InternalLink slug="48-hours-in-paris" /> - Just a 3.5-hour train ride from Amsterdam, Paris offers a completely different European experience
+- <InternalLink slug="48-hours-in-vienna" /> - The Austrian capital is just 11 hours by train from Amsterdam
+- <InternalLink slug="48-hours-in-prague" /> - The Czech capital is just 12 hours by train from Amsterdam
+
+Each city offers its own unique charm and experiences, making Europe an endlessly fascinating continent to explore.
