@@ -2,7 +2,11 @@
 import "../styles/global.css";
 import { AstroSeo } from "@astrolib/seo";
 
-const { title, description, image, article, canonicalURL } = Astro.props;
+const { title, description, image, article } = Astro.props;
+const canonicalURL = new URL(
+  Astro.url.pathname,
+  'https://avsblogs.netlify.app'
+).toString();
 ---
 
 <!-- Critical CSS -->
@@ -67,13 +71,13 @@ const { title, description, image, article, canonicalURL } = Astro.props;
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
 <AstroSeo
-  title="Aniruddha Surse | Personal Blog & Portfolio"
-  description="Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator."
-  canonical={canonicalURL || "https://avsblogs.netlify.app/"}
+  title={title || "Aniruddha Surse | Personal Blog & Portfolio"}
+  description={description || "Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator."}
+  canonical={canonicalURL}
   openGraph={{
-    url: canonicalURL || "https://avsblogs.netlify.app/",
-    title: "Aniruddha Surse | Personal Blog & Portfolio",
-    description: "Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator.",
+    url: canonicalURL,
+    title: title || "Aniruddha Surse | Personal Blog & Portfolio",
+    description: description || "Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator.",
     images: [
       {
         url: "https://avsblogs.netlify.app/og-image.jpg",
@@ -84,7 +88,7 @@ const { title, description, image, article, canonicalURL } = Astro.props;
       },
     ],
     site_name: "Aniruddha Surse",
-    type: "website",
+    type: article ? "article" : "website",
     locale: "en_US",
   }}
   twitter={{
@@ -110,23 +114,23 @@ const { title, description, image, article, canonicalURL } = Astro.props;
 <link rel="manifest" href="/favicons/site.webmanifest" />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={canonicalURL || "https://avsblogs.netlify.app/"} />
-<meta property="og:title" content="Aniruddha Surse | Personal Blog & Portfolio" />
-<meta property="og:description" content="Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator." />
+<meta property="og:type" content={article ? "article" : "website"} />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title || "Aniruddha Surse | Personal Blog & Portfolio"} />
+<meta property="og:description" content={description || "Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator."} />
 <meta property="og:image" content="https://avsblogs.netlify.app/og-image.jpg" />
 <meta property="og:site_name" content="Aniruddha Surse" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={canonicalURL || "https://avsblogs.netlify.app/"} />
-<meta property="twitter:title" content="Aniruddha Surse | Personal Blog & Portfolio" />
-<meta property="twitter:description" content="Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator." />
+<meta property="twitter:url" content={canonicalURL} />
+<meta property="twitter:title" content={title || "Aniruddha Surse | Personal Blog & Portfolio"} />
+<meta property="twitter:description" content={description || "Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator."} />
 <meta property="twitter:image" content="https://avsblogs.netlify.app/og-image.jpg" />
 <meta property="twitter:creator" content="@aniruddhasurse" />
 
 <!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL || "https://avsblogs.netlify.app/"} />
+<link rel="canonical" href={canonicalURL} />
 
 <!-- Additional SEO -->
 <meta name="robots" content="index, follow, max-image-preview:large" />
