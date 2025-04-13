@@ -55,6 +55,16 @@ export default defineConfig({
       changefreq: "weekly",
       priority: 0.7,
       lastmod: new Date(),
+      serialize: (item) => {
+        return {
+          ...item,
+          lastmod: new Date().toISOString(),
+        }
+      },
+      filter: (page) => {
+        // Exclude 404 page from sitemap
+        return !page.includes("404")
+      },
     }),
     mdx(),
   ],
