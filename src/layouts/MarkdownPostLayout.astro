@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
 import { Image } from 'astro:assets';
+import ExternalLink from "../components/ExternalLink.astro";
 const { frontmatter, entry } = Astro.props;
 import { AstroSeo } from "@astrolib/seo";
 ---
@@ -88,3 +89,17 @@ Use AstroSeo in all the pages you want different Seo than the index page
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  // Add target="_blank" and rel="noopener noreferrer" to all external links
+  document.addEventListener('DOMContentLoaded', () => {
+    const content = document.querySelector('.prose');
+    if (content) {
+      const links = content.querySelectorAll('a[href^="http"]');
+      links.forEach(link => {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
+    }
+  });
+</script>
