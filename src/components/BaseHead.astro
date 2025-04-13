@@ -1,7 +1,70 @@
 ---
-import "../styles/global.css";
+import globalStyles from '../styles/global.css';
 import { AstroSeo } from "@astrolib/seo";
+
+const { title, description, image, article, canonicalURL } = Astro.props;
 ---
+
+<!-- Critical CSS -->
+<style is:inline>
+  /* Add critical CSS here */
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+  .font-display {
+    font-family: 'Gilda Display', serif;
+  }
+</style>
+
+<!-- Preload critical fonts -->
+<link rel="preload" href="/fonts/inter.css" as="style" />
+<link rel="preload" href="/fonts/GildaDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin />
+
+<!-- Defer non-critical CSS -->
+<link rel="stylesheet" href={globalStyles} media="print" onload="this.media='all'" />
+<noscript><link rel="stylesheet" href={globalStyles} /></noscript>
+
+<!-- Preload critical images -->
+<link rel="preload" as="image" href="/images/hero-mobile.webp" media="(max-width: 768px)" />
+<link rel="preload" as="image" href="/images/hero-desktop.webp" media="(min-width: 769px)" />
+
+<!-- DNS prefetch and preconnect -->
+<link rel="dns-prefetch" href="https://rsms.me" />
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+<link rel="dns-prefetch" href="https://unpkg.com" />
+
+<link rel="preconnect" href="https://rsms.me" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://unpkg.com" />
+
+<!-- Performance Monitoring -->
+<script>
+  // Monitor LCP
+  new PerformanceObserver((list) => {
+    const latestEntry = list.getEntries().at(-1);
+    if (latestEntry?.element?.getAttribute('loading') === 'lazy') {
+      console.warn('Warning: LCP element was lazy loaded', latestEntry);
+    }
+  }).observe({type: 'largest-contentful-paint', buffered: true});
+
+  // Monitor FCP
+  new PerformanceObserver((list) => {
+    const latestEntry = list.getEntries().at(-1);
+    console.log('FCP:', latestEntry.startTime);
+    // Send to analytics if needed
+  }).observe({type: 'first-contentful-paint', buffered: true});
+</script>
+
+<!-- Self-host Alpine.js -->
+<script defer src="/js/alpine.min.js"></script>
+
+<!-- Viewport optimization -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
 <AstroSeo
   title="Your Page Title"
@@ -32,7 +95,7 @@ import { AstroSeo } from "@astrolib/seo";
 />
 
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
 <!-- Basic Meta Tags -->
 <title>Your Website Title</title>
@@ -42,6 +105,10 @@ import { AstroSeo } from "@astrolib/seo";
 />
 <meta name="keywords" content="keyword1, keyword2, keyword3" />
 <meta name="author" content="Your Name or Company Name" />
+
+<!-- Preload critical assets -->
+<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="/fonts/gilda-display.woff2" as="font" type="font/woff2" crossorigin />
 
 <!-- Favicons -->
 <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -112,3 +179,21 @@ import { AstroSeo } from "@astrolib/seo";
   rel="stylesheet"
 />
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+<!-- Preload critical fonts -->
+<link rel="preload" href="https://rsms.me/inter/inter.css" as="style" />
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" as="style" />
+
+<!-- Font stylesheets with display swap -->
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'" />
+<link href="https://api.fontshare.com/v2/css?f[]=jet-brains-mono@1,2&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+
+<!-- Fallback for browsers that don't support onload -->
+<noscript>
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <link href="https://api.fontshare.com/v2/css?f[]=jet-brains-mono@1,2&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" />
+</noscript>

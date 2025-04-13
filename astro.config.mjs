@@ -1,25 +1,65 @@
-import { defineConfig } from 'astro/config';
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from "astro/config"
+import tailwindcss from "@tailwindcss/vite"
 
-import sitemap from "@astrojs/sitemap";
-import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap"
+import mdx from "@astrojs/mdx"
 
 // https://astro.build/config
 export default defineConfig({
-   vite: {
+  vite: {
     plugins: [tailwindcss()],
+    build: {
+      cssMinify: true,
+      rollupOptions: {
+        output: {
+          manualChunks: {
+            vendor: ["alpinejs"],
+          },
+        },
+      },
+      target: "esnext",
+      minify: "terser",
+      terserOptions: {
+        compress: {
+          drop_console: true,
+          drop_debugger: true,
+        },
+        mangle: {
+          properties: {
+            regex: /^_/,
+          },
+        },
+      },
+    },
+    optimizeDeps: {
+      include: ["alpinejs"],
+    },
+    ssr: {
+      noExternal: ["@astrolib/seo"],
+    },
   },
   markdown: {
     drafts: true,
     shikiConfig: {
-      theme: "css-variables"
-    }
+      theme: "css-variables",
+    },
   },
   shikiConfig: {
     wrap: true,
     skipInline: false,
-    drafts: true
+    drafts: true,
   },
-  site: 'https://yourwebsite.com',
-  integrations: [sitemap(), mdx()]
-});
+  site: "https://yourwebsite.com",
+  integrations: [
+    sitemap({
+      changefreq: "weekly",
+      priority: 0.7,
+      lastmod: new Date(),
+    }),
+    mdx(),
+  ],
+  build: {
+    inlineStylesheets: "auto",
+  },
+  output: "static",
+})

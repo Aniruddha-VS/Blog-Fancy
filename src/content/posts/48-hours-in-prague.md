@@ -1,5 +1,5 @@
 ---
-pubDate: 2025-04-04
+pubDate: 2025-04-06
 author: Aniruddha Vijay Surse
 title: The best 48 Hours in Prague
 description: "Discover the perfect 48 hours in Prague with our expert itinerary. Explore the iconic Charles Bridge, Prague Castle, Old Town Square, and hidden gems in this beautiful European capital. Complete with costs, timing, and insider tips for an unforgettable weekend city break in Prague."
