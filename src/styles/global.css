@@ -20,7 +20,7 @@
   --color-blue-950: #01001e;
 }
 .font-display {
-   font-family: var(--font-display);
+  font-family: var(--font-display);
 }
 .font-sans {
   font-family: var(--font-sans);
@@ -54,4 +54,6 @@
   --astro-code-token-link: #ffffff;
 }
 
-
+/* Export default object for Astro imports */
+export default {
+}
