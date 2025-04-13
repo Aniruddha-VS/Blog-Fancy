@@ -67,12 +67,12 @@ const { title, description, image, article, canonicalURL } = Astro.props;
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
 <AstroSeo
-  title="Your Page Title"
+  title="Aniruddha's Blogs"
   description="A detailed description of your page content."
   canonical="https://yoursite.com/current-page"
   openGraph={{
     url: "https://yoursite.com/current-page",
-    title: "Your Page Title",
+    title: "Aniruddha's Blogs",
     description: "A detailed description of your page content.",
     images: [
       {
@@ -83,7 +83,7 @@ const { title, description, image, article, canonicalURL } = Astro.props;
         type: "image/jpeg",
       },
     ],
-    site_name: "Your Site Name",
+    site_name: "Aniruddha's Blogs",
     type: "website",
     locale: "en_US",
   }}
@@ -98,57 +98,23 @@ const { title, description, image, article, canonicalURL } = Astro.props;
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
 <!-- Basic Meta Tags -->
-<title>Your Website Title</title>
-<meta
-  name="description"
-  content="A brief description of your website content."
-/>
-<meta name="keywords" content="keyword1, keyword2, keyword3" />
-<meta name="author" content="Your Name or Company Name" />
-
-<!-- Preload critical assets -->
-<link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
-<link rel="preload" href="/fonts/gilda-display.woff2" as="font" type="font/woff2" crossorigin />
-
-<!-- Favicons -->
-<link rel="icon" href="/favicon.ico" sizes="any" />
-<link rel="icon" href="/icon.svg" type="image/svg+xml" />
-<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<link rel="manifest" href="/manifest.webmanifest" />
-
-<!-- Favicon for IE -->
-<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
-<!-- Favicons for different sizes -->
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+<meta name="generator" content={Astro.generator} />
+<meta name="description" content="A detailed description of your page content." />
+<title>Aniruddha's Blogs</title>
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.yourwebsite.com/" />
-<meta property="og:title" content="Your Website Title" />
-<meta
-  property="og:description"
-  content="A brief description of your website content."
-/>
-<meta
-  property="og:image"
-  content="https://www.yourwebsite.com/path/to/image.jpg"
-/>
+<meta property="og:url" content="https://yoursite.com/current-page" />
+<meta property="og:title" content="Aniruddha's Blogs" />
+<meta property="og:description" content="A detailed description of your page content." />
+<meta property="og:image" content="https://yoursite.com/og-image.jpg" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://www.yourwebsite.com/" />
-<meta property="twitter:title" content="Your Website Title" />
-<meta
-  property="twitter:description"
-  content="A brief description of your website content."
-/>
-<meta
-  property="twitter:image"
-  content="https://www.yourwebsite.com/path/to/image.jpg"
-/>
+<meta property="twitter:url" content="https://yoursite.com/current-page" />
+<meta property="twitter:title" content="Aniruddha's Blogs" />
+<meta property="twitter:description" content="A detailed description of your page content." />
+<meta property="twitter:image" content="https://yoursite.com/og-image.jpg" />
 
 <!-- Canonical URL -->
 <link rel="canonical" href="https://www.yourwebsite.com/" />
