@@ -1,0 +1,8 @@
+[[headers]]
+  for = "*.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+
+[build]
+  publish = "dist"
+  command = "npm run build" 
