@@ -1,12 +1,46 @@
 ---
 import "../styles/global.css";
 import { AstroSeo } from "@astrolib/seo";
+import { Image } from "astro:assets";
+import { getImage } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import type { OpenGraph } from "astro-seo";
 
-const { title, description, image, article } = Astro.props;
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string | ImageMetadata;
+  canonicalURL?: string;
+  noIndex?: boolean;
+  type?: "website" | "article";
+  openGraph?: OpenGraph;
+}
+
+const {
+  title,
+  description,
+  image,
+  canonicalURL,
+  noIndex = false,
+  type = "website",
+  openGraph,
+} = Astro.props;
+
 const canonicalURL = new URL(
   Astro.url.pathname,
   'https://aniruddhasurse.netlify.app'
 ).toString();
+
+// Default image for social sharing
+const defaultImage = await getImage({
+  src: "../assets/og-image.jpg",
+  width: 1200,
+  height: 630,
+  format: "jpg",
+});
+
+// Use provided image or default
+const ogImage = image ? await getImage({ src: image }) : defaultImage;
 ---
 
 <!-- Critical CSS -->
@@ -215,4 +249,14 @@ const canonicalURL = new URL(
     "query-input": "required name=search_term_string"
   }
 }
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1ZSNSMHV14"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1ZSNSMHV14');
 </script>
