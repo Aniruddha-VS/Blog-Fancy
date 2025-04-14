@@ -52,47 +52,18 @@ const finalImage = image || {
   }
 </style>
 
-<!-- Preload critical fonts -->
-<link rel="preload" href="/fonts/inter.css" as="style" />
-<link rel="preload" href="/fonts/GildaDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin />
-
-<!-- Defer non-critical CSS -->
-<link rel="stylesheet" href="/styles/global.css" media="print" onload="this.media='all'" />
-<noscript><link rel="stylesheet" href="/styles/global.css" /></noscript>
-
-<!-- Preload critical images -->
-<link rel="preload" as="image" href="/images/hero-mobile.webp" media="(max-width: 768px)" />
-<link rel="preload" as="image" href="/images/hero-desktop.webp" media="(min-width: 769px)" />
-
 <!-- DNS prefetch and preconnect -->
 <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+<link rel="dns-prefetch" href="https://rsms.me" />
+<link rel="dns-prefetch" href="https://api.fontshare.com" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://www.googletagmanager.com" />
-
-<!-- Performance Monitoring -->
-<script>
-  // Monitor LCP
-  new PerformanceObserver((list) => {
-    const latestEntry = list.getEntries().at(-1);
-    if (latestEntry?.element?.getAttribute('loading') === 'lazy') {
-      console.warn('Warning: LCP element was lazy loaded', latestEntry);
-    }
-  }).observe({type: 'largest-contentful-paint', buffered: true});
-
-  // Monitor FCP
-  new PerformanceObserver((list) => {
-    const latestEntry = list.getEntries().at(-1);
-    console.log('FCP:', latestEntry.startTime);
-    // Send to analytics if needed
-  }).observe({type: 'first-contentful-paint', buffered: true});
-</script>
-
-<!-- Self-host Alpine.js -->
-<script defer src="/js/alpine.min.js"></script>
+<link rel="preconnect" href="https://rsms.me" />
+<link rel="preconnect" href="https://api.fontshare.com" />
 
 <!-- Viewport optimization -->
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -175,30 +146,9 @@ const finalImage = image || {
 <!-- For IE -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<!-- HTML in your document's head -->
-<link rel="preconnect" href="https://rsms.me/" />
-<link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-<link
-  href="https://api.fontshare.com/v2/css?f[]=jet-brains-mono@1,2&display=swap"
-  rel="stylesheet"
-/>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link
-  href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap"
-  rel="stylesheet"
-/>
-<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-
-<!-- Preload critical fonts -->
-<link rel="preload" href="https://rsms.me/inter/inter.css" as="style" />
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" as="style" />
-
 <!-- Font stylesheets with display swap -->
 <link rel="stylesheet" href="https://rsms.me/inter/inter.css" media="print" onload="this.media='all'" />
 <link href="https://api.fontshare.com/v2/css?f[]=jet-brains-mono@1,2&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
 
 <!-- Fallback for browsers that don't support onload -->
@@ -207,6 +157,9 @@ const finalImage = image || {
   <link href="https://api.fontshare.com/v2/css?f[]=jet-brains-mono@1,2&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&display=swap" rel="stylesheet" />
 </noscript>
+
+<!-- Alpine.js from CDN -->
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 <!-- Structured Data for Person -->
 <script type="application/ld+json">
