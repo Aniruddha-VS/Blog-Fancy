@@ -20,16 +20,14 @@ const {
   title,
   description,
   image,
-  canonicalURL,
+  canonicalURL = new URL(
+    Astro.url.pathname,
+    'https://aniruddhasurse.netlify.app'
+  ).toString(),
   noIndex = false,
   type = "website",
   openGraph,
 } = Astro.props;
-
-const canonicalURL = new URL(
-  Astro.url.pathname,
-  'https://aniruddhasurse.netlify.app'
-).toString();
 
 // Default image for social sharing
 const defaultImage = await getImage({
