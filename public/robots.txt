@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://aniruddhasurse.netlify.app/sitemap.xml
+Sitemap: https://aniruddhasurse.netlify.app/sitemap-index.xml
 
 # Disallow admin or private areas if they exist
 # Disallow: /admin/
