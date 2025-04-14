@@ -7,7 +7,7 @@ import { AstroSeo } from "@astrolib/seo";
 
 const canonicalURL = new URL(
   Astro.url.pathname,
-  'https://avsblogs.netlify.app'
+  'https://aniruddhasurse.netlify.app'
 ).toString();
 ---
 
@@ -17,11 +17,15 @@ Use AstroSeo in all the pages you want different Seo than the index page
 <AstroSeo
   title={frontmatter.title}
   description={frontmatter.description}
-  canonical={canonicalURL}
+  canonical={`https://aniruddhasurse.netlify.app/posts/${frontmatter.slug}`}
   openGraph={{
-    url: canonicalURL,
-    title: frontmatter.title,
-    description: frontmatter.description,
+    basic: {
+      title: frontmatter.title,
+      type: "article",
+      image: frontmatter.image,
+      url: `https://aniruddhasurse.netlify.app/posts/${frontmatter.slug}`,
+      siteName: "Aniruddha Surse",
+    },
     images: [
       {
         url: frontmatter.image.url,

@@ -49,7 +49,7 @@ export default defineConfig({
     skipInline: false,
     drafts: true,
   },
-  site: "https://avsblogs.netlify.app",
+  site: "https://aniruddhasurse.netlify.app",
   integrations: [
     sitemap({
       changefreq: "weekly",

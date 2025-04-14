@@ -5,7 +5,7 @@ import { AstroSeo } from "@astrolib/seo";
 const { title, description, image, article } = Astro.props;
 const canonicalURL = new URL(
   Astro.url.pathname,
-  'https://avsblogs.netlify.app'
+  'https://aniruddhasurse.netlify.app'
 ).toString();
 ---
 
@@ -80,7 +80,7 @@ const canonicalURL = new URL(
     description: description || "Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator.",
     images: [
       {
-        url: "https://avsblogs.netlify.app/og-image.jpg",
+        url: "https://aniruddhasurse.netlify.app/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Aniruddha Surse - Personal Website",
@@ -118,7 +118,7 @@ const canonicalURL = new URL(
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title || "Aniruddha Surse | Personal Blog & Portfolio"} />
 <meta property="og:description" content={description || "Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator."} />
-<meta property="og:image" content="https://avsblogs.netlify.app/og-image.jpg" />
+<meta property="og:image" content="https://aniruddhasurse.netlify.app/og-image.jpg" />
 <meta property="og:site_name" content="Aniruddha Surse" />
 
 <!-- Twitter -->
@@ -126,7 +126,7 @@ const canonicalURL = new URL(
 <meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:title" content={title || "Aniruddha Surse | Personal Blog & Portfolio"} />
 <meta property="twitter:description" content={description || "Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator."} />
-<meta property="twitter:image" content="https://avsblogs.netlify.app/og-image.jpg" />
+<meta property="twitter:image" content="https://aniruddhasurse.netlify.app/og-image.jpg" />
 <meta property="twitter:creator" content="@aniruddhasurse" />
 
 <!-- Canonical URL -->
@@ -187,7 +187,7 @@ const canonicalURL = new URL(
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Aniruddha Surse",
-  "url": "https://avsblogs.netlify.app/",
+  "url": "https://aniruddhasurse.netlify.app/",
   "sameAs": [
     "https://www.linkedin.com/in/aniruddha-surse",
     "https://www.instagram.com/aniruddha.surse/",
@@ -208,10 +208,10 @@ const canonicalURL = new URL(
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": "Aniruddha Surse",
-  "url": "https://avsblogs.netlify.app/",
+  "url": "https://aniruddhasurse.netlify.app/",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://avsblogs.netlify.app/search?q={search_term_string}",
+    "target": "https://aniruddhasurse.netlify.app/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 }
