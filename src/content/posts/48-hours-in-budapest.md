@@ -11,7 +11,7 @@ tags: ["Hungary", "Budapest"]
 
 # 48 Hours in Budapest: Your Ultimate Weekend Guide to the Pearl of the Danube
 
-Welcome to Budapest, a city where thermal waters flow beneath grand architecture. This 48-hour Budapest itinerary is perfect for first-time visitors who want to experience the best of the Hungarian capital in just two days. From historic baths to ruin bars and stunning views, this guide will help you make the most of your weekend in Budapest, ensuring you hit all the must-see attractions while still having time to savor the unique atmosphere of this historic European gem.
+Welcome to Budapest, a city where thermal waters flow beneath grand architecture. This 48-hour Budapest itinerary is perfect for first-time visitors who want to experience the best of the Hungarian capital in just two days. From historic baths to ruin bars and stunning views, this guide will help you make the most of your weekend in Budape st, ensuring you hit all the must-see attractions while still having time to savor the unique atmosphere of this historic European gem.
 
 ## Essential Budapest Hacks
 
