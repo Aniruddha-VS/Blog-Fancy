@@ -101,10 +101,8 @@ const finalImage = image || {
 
 <!-- Basic Meta Tags -->
 <meta name="generator" content={Astro.generator} />
-<meta name="description" content="Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator." />
 <meta name="author" content="Aniruddha Surse" />
 <meta name="keywords" content="Aniruddha Surse, software developer, tech blog, portfolio, web development, programming" />
-<title>Aniruddha Surse | Personal Blog & Portfolio</title>
 
 <!-- Favicons - Comprehensive setup for all platforms -->
 <link rel="icon" href="/favicons/favicon.ico" />
@@ -204,3 +202,9 @@ const finalImage = image || {
   gtag('js', new Date());
   gtag('config', 'G-1ZSNSMHV14');
 </script>
+
+<!-- Single title tag for the page -->
+<title>{title || "Aniruddha Surse | Personal Blog & Portfolio"}</title>
+
+<!-- Single meta description tag for the page -->
+<meta name="description" content={description || "Official website of Aniruddha Surse. Explore my blog posts, projects, and professional journey. Software developer, tech enthusiast, and content creator."} />

@@ -40,7 +40,14 @@ const { title, url, description, pubDate, author, image, tags, isFirst = false }
         <div class="mt-4 flex flex-wrap gap-2">
           {
             tags.map((tag) => (
-              <span class="text-xs font-medium text-black">{tag}</span>
+              <a 
+                href={`/tags/${tag}`} 
+                class="inline-flex items-center px-2 py-1 rounded-full bg-gray-100 hover:bg-blue-100 text-xs font-medium text-gray-800 hover:text-blue-700 transition-colors duration-200"
+                aria-label={`View all posts tagged with ${tag}`}
+                onclick="event.stopPropagation()"
+              >
+                {tag}
+              </a>
             ))
           }
         </div>

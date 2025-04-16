@@ -17,11 +17,18 @@ const sortedPosts = allPosts.sort(
   <Hero />
   <section>
     <div class="px-8 md:px-12 mx-auto max-w-7xl py-12 lg:px-32">
-      <ol role="list" class="flex flex-wrap gap-3">
+      <h2 class="text-2xl font-display font-bold mb-4">Browse by Location</h2>
+      <ol role="list" class="flex flex-wrap gap-2 mb-8">
         {
           tags.map((tag) => (
-            <li class="inline-flex items-center uppercase mx-auto hover:text-blue-500 text-xs font-medium text-black">
-              <a href={`/tags/${tag}`}>{tag}</a>
+            <li>
+              <a 
+                href={`/tags/${tag}`} 
+                class="inline-flex items-center px-3 py-1.5 rounded-full bg-gray-100 hover:bg-blue-100 text-sm font-medium text-gray-800 hover:text-blue-700 transition-colors duration-200"
+                aria-label={`View all posts tagged with ${tag}`}
+              >
+                {tag}
+              </a>
             </li>
           ))
         }
